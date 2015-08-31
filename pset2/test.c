@@ -4,17 +4,11 @@
 
 int main()
 {
-	char t[] = "hier s%%eht w4s";
-	for (int i = 0; i < strlen(t); i++)
-	{
-	    if (isalpha(t[i]))
-	    {
-	        int x = (int) t[i];
-	        printf("%i \n", x);
-	    }
-	    else
-	    {
-	        printf("%c \n", t[i]);
-	    }
-	}
+
+    int n = 23;
+    int k = 48;
+    
+    int i = k % n;
+    printf("%i \n", i);
+    
 }

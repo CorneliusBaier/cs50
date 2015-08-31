@@ -25,7 +25,7 @@ int main(int argc, string argv[])
        k = check_key(k);
        
        // get the text that should be encrypted
-       printf("Please enter your cipher text: \n");
+       //printf("Please enter your cipher text: \n");
        string p = GetString();
        
        //iterate over the string and encipher character by character
