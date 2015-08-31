@@ -1,9 +1,20 @@
 #include <stdio.h>
+#include <string.h>
+#include <ctype.h>
 
-int main(int argc, char * argv[])
-
+int main()
 {
-    for (int i = 0; i < argc; i++) 
-        printf("argv[%d] is: %s \n", argc, argv[i]);
-    return 0;
+	char t[] = "hier s%%eht w4s";
+	for (int i = 0; i < strlen(t); i++)
+	{
+	    if (isalpha(t[i]))
+	    {
+	        int x = (int) t[i];
+	        printf("%i \n", x);
+	    }
+	    else
+	    {
+	        printf("%c \n", t[i]);
+	    }
+	}
 }
