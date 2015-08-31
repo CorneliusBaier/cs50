@@ -1,0 +1,47 @@
+Notes on caesar.c
+
+TODO:
+1. get the key
+2. get the plaintext
+3. encipher
+4. print the ciphertext
+
+int main(int argc, string argv[])
+	-> argc must be 2
+	-> argv[1] is a string
+	-> convert to int
+	
+creating an array:
+string mailbox[3];
+mailbox[0] = "..."
+...
+
+atoi: from string to integer
+string num = "50"
+int i = atoi(num)
+
+-> library einbinden -> man atoi
+
+3. Encypher
+-> ASCii-Table
+
+Shift letters only: isalpha('Z') -> true
+isupper('Z') -> true
+...
+
+ci: ith ciphertext
+pi: ith plaintext letter
+k: key
+%26: remainder after dividing by 26
+
+e. g.: 
+('Y' + 2) % 26 = (89 + 2) % 26
+= 91 % 26
+= 13 
+!= 'A'
+-> switch from ASCii to alphabetical indexes and back
+
+A string is just an array of characters:
+string text = "This is CS50"
+text[0] = 'T'
+strlen(text) = 12

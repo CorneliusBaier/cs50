@@ -1,0 +1,40 @@
+Loops
+
+while
+for
+do while
+
+functions
+
+ceasar cipher
+
+A Key of 1
+A -> B
+
+Key of 3
+A -> D
+
+CAT
+Key of 5
+HFY
+
+COMPUTER
+Key of 7
+-> JVTWBALY
+
+Command line arguments
+
+main accepts two parameters: argc and argv[]
+
+argc = stands for argument count, is an int and is the number of arguments including the command itself
+argv = argument vector, each element in arguments
+
+int main(int argc, char * argv[])
+
+{
+    for (int i = 0; i < argc; i++) 
+        printf("argv[%d] is: %s \n", argc, argv[i]
+    return 0;
+}
+
+ 

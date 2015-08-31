@@ -1,0 +1,44 @@
+greedy.c
+
+Goal: give out the minimum number of coins
+
+- always use the largest coins possible
+
+int quarter = 25;
+int dime = 10;
+int nickel = 5;
+int penny = 1;
+
+1. prompt the user for an amount of change
+2. always use the largest coin possible
+3. keep track of how many coins we use
+4. print the final amount of coins
+
+1. one use non-negative inputs!
+
+impresision.c
+round()
+
+-> convert dollar-value to cents
+-> multiply with 100
+-> man round -> returns double and then cast to int
+
+2. 
+get amount in dollars
+while (quarters can be used)
+    increase count
+    amount decrease by a quarter
+while (dimes can be used)
+    increase count
+    amout decrease by a dime
+...
+
+print number of coins used
+
+modulo math
+    74 % 3 = 2
+    6 % 5 = 1
+    ...
+    
+
+

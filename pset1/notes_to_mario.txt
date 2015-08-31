@@ -1,0 +1,53 @@
+Mario.c
+
+two parts:
+1. prompt and validate user input
+2. draw the pyramid
+
+1. int has to be between 1 and 23
+    
+    int n;
+    
+    do 
+    {
+        n = GetInt();
+    while (n is invalid);
+    
+2. draw the pyramid
+
+##
+###
+####
+....
+-> but pyramid is supposed to be right aligned
+  ##
+ ###
+####
+
+if n = 8:
+- first row: 2 hashes, 7 spaces
+- second row: 3 #, 6 spaces
+...
+
+- nth row = n+2 hashes
+
+for every row:
+- print spaces
+- print hashes
+- print a new line
+
+for (initialization; condition; update)
+{
+    // code inside
+}
+
+// code outside
+
+for (int = 0; i < height; i++)
+{
+    // print spaces
+    // print hashes
+    // print new line
+}
+
+// code outside
