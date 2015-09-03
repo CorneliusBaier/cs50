@@ -4,14 +4,16 @@
 
 int main()
 {
-    int a = 0;
-    int b = 10;
+
+    char test = '%';
     
-    for (int i = 0; i < b; i++)
+    if (isalpha(test))
     {
-        int x = a % b;
-        printf("%i \n", x);
-        a++;
+        printf("ist alpha \n");
+    }
+    else
+    {
+        printf("ist nicht alpha \n");
     }
     
 }

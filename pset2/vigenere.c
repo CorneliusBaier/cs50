@@ -81,7 +81,6 @@ void encipher(string input, string key)
         }
         
     }
-
     
     // use the key to encipher the input-text
     
@@ -114,7 +113,7 @@ void encipher(string input, string key)
                     result[i] = (char) temp;
                 }
             }
-            else
+            if (islower(input[i]))
             {
                 if (temp > 122)
                 {
@@ -125,6 +124,12 @@ void encipher(string input, string key)
                 {
                     result[i] = (char) temp;
                 }
+            }
+            
+            if (!isalpha(input[i]))
+            {
+                result[i] = (char) input[i];
+                a--;
             }
           }
         
