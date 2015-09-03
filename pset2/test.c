@@ -4,11 +4,14 @@
 
 int main()
 {
-
-    int n = 23;
-    int k = 48;
+    int a = 1;
+    int b = 10;
     
-    int i = k % n;
-    printf("%i \n", i);
+    for (int i = 0; i < b; i++)
+    {
+        int x = a % b;
+        printf("%i \n", x);
+        a++;
+    }
     
 }

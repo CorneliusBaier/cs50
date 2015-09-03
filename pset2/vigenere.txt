@@ -1,0 +1,13 @@
+
+1. Get the key
+keyword is not an int but a string
+
+2. get the plaintext
+as in caesar.c
+
+3. encipher
+take the index and modulo it. the result will never be greater than the index.
+
+4. print the ciphertext
+
+
