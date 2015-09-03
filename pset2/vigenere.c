@@ -63,57 +63,81 @@ void encipher(string input, string key)
  
     int x = strlen(key);
 
-  //  int indizes[strlen(key)];
+    int indizes[strlen(key)];
     char result[strlen(input)];
-  /*  
+    
+    
     for (int i = 0; i < x; i++)
     {
         if (isupper(key[i]))
         {
             indizes[i] = (int) key[i] - 65;
+            // printf("%i \n",indizes[i]);
         }
         else
         {
             indizes[i] = (int) key[i] - 97;
+            // printf("%i \n",indizes[i]);
         }
         
     }
+
     
-      for (int i = 0; i < x; i++)
-    {
-           
-        printf("%i \n", result[i]);
-    }
-    */
     // use the key to encipher the input-text
-    int test = 0;
+    
+    // int index = 0;
+    int a = 0;
+    
     for (int i = 0; i < strlen(input); i++)
     {
-        if (test < strlen(key))
-        {   
-            int position_for_enciphering = test % x;
-            int new_int_for_enciphered_text = (int) input[i] + (int) key[position_for_enciphering];
-            result[i] = (char) new_int_for_enciphered_text;
-            test++;
+        
+        int b = strlen(key);
+        int c = a % b;
+        int temp = (int) input[i] + indizes[c];
+        
+        if ((int) input[i] == 32)
+        {
+            result[i] = (char) 32;
+            a--;
         }
         else
         {
-            test = 0;
-            int position_for_enciphering = test % x;
-            int new_int_for_enciphered_text = (int) input[i] + (int) key[position_for_enciphering];
-            result[i] = (char) new_int_for_enciphered_text;
-            
-        }
-    }
-    
-    
-    
-    
-    
-    for (int i = 0; i < x; i++)
+            if (isupper(input[i]))
+            {
+                if (temp > 90)
+                {
+                    temp = temp - 26;
+                    result[i] = (char) temp;
+                }
+                else 
+                {
+                    result[i] = (char) temp;
+                }
+            }
+            else
+            {
+                if (temp > 122)
+                {
+                    temp = temp - 26;
+                    result[i] = (char) temp;
+                }
+                else 
+                {
+                    result[i] = (char) temp;
+                }
+            }
+          }
+        
+        a++;
+
+    } 
+   
+    for (int i = 0; i < strlen(input); i++)
     {
            
-        printf("%i \n", result[i]);
+        printf("%c", result[i]);
     }
+    printf("\n");
+    
 	
 }
