@@ -5,5 +5,5 @@
 // print out hello, world
 int main(void)
 {
-    printf("hello, world 123\n");
+    printf("hello, world\n");
 }
