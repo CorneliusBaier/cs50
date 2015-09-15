@@ -34,7 +34,7 @@ int main(int argc, string argv[])
     // convert the first command line argument from string to int
     int n = atoi(argv[1]);
 
-    // check, if an optional seed is provided by the user. if yes, use it with the pseudo-random-number generator srand
+    // check, if an optional seed is provided by the user. if yes, use it with the pseudo-random-number srand
     if (argc == 3)
     {
         srand48((long int) atoi(argv[2]));

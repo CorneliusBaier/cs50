@@ -16,7 +16,44 @@
  */
 bool search(int value, int values[], int n)
 {
-    int counter = 0;
+    //int length = sizeof(values)/sizeof(values[0]);
+    int result = 1;
+    
+    int middle = n / 2;
+    
+    while (n > 0)
+    {
+        
+        int temp = values[middle];
+        printf("%i \n", middle);
+        
+        if (temp == n)
+        {
+            result = 1;
+            break;
+        }
+        else if (temp < values[n])
+        {
+            middle = (n - middle) / 2;
+            n = n / 2;
+            result = 0;
+        }
+        else
+        {
+            middle = (n - middle) / 2 + middle;
+            n = n / 2;
+            result = 0;
+        }       
+    
+    }
+    
+    if (result == 1)
+        return true;
+    else
+        return false;   
+
+
+/*    int counter = 0;
     
     for (int i = 0; i < n; i++)
     {
@@ -33,7 +70,7 @@ bool search(int value, int values[], int n)
     else
     {
         return false;
-    }
+    }*/
 }
 
 /**
@@ -41,8 +78,24 @@ bool search(int value, int values[], int n)
  */
 void sort(int values[], int n)
 {
+    // bubble sort
+   int c, d, swap;
+   
+   for (c = 0 ; c < ( n - 1 ); c++)
+    {
+        for (d = 0 ; d < n - c - 1; d++)
+        {
+            if (values[d] > values[d+1]) 
+            {
+                swap       = values[d];
+                values[d]   = values[d+1];
+                values[d+1] = swap;
+            }
+        }
+    }
+
     
-   for (int i = 0; i < n - 1; i++)
+ /*  for (int i = 0; i < n - 1; i++)
     {
         for (int j = i + 1; j < n; j++)
         {
@@ -54,9 +107,12 @@ void sort(int values[], int n)
             }
         }
     }
+    
+    
+    
         for (int m = 0; m < n; m++)
     {
         printf("%i \n", values[m]);
-    }
+    }*/
     
 }
